@@ -1,0 +1,226 @@
+#!/bin/bash
+
+#Nodes extractor by Vladgslav Rehan
+#version 3.4
+#relase soon
+OLDIFS=$IFS
+existworkdir=0
+existresdir=0
+existnodesdir=0
+workdir=/data/data/com.termux/files/home/storage/downloads/Nodes
+resdir=/data/data/com.termux/files/home/storage/downloads/Nodes/Result
+nodesdir=/data/data/com.termux/files/home/storage/shared/Stick\ Nodes/stickfigures
+if [ -d "$workdir" ]
+then
+	echo "Workdir directory exists!"
+	existworkdir=1
+fi
+
+if [ -d "$nodesdir" ]
+then
+	echo "Nodes directory exists!"
+	existnodesdir=1
+fi
+
+if [ $existnodesdir -eq 0 ]
+then
+	echo "Nodes directory does mot exist!"
+	echo "Script will stop now..."
+	killl=$(ps -ef | grep <$0>)
+	killl=$(kill -9 <$0>)
+fi
+
+if [ -d "$resdir" ]
+then
+        echo "Resdir directory exists!"
+        existresdir=1
+	echo " "
+fi
+
+if [ $existworkdir -eq 0 ]
+then
+	echo "Working directory does not exist!"
+	echo "Creating direcory 'Nodes' in"
+	echo "/data/data/com.termux/files/home/storage/downloads"
+	cd /data/data/com.termux/files/home/storage/downloads
+	mkdir Nodes
+	echo "Done"
+	echo " "
+fi
+
+if [ $existresdir -eq 0 ]
+then
+	echo "Resdir does not exist!"
+	echo "Creating directory 'Result' in"
+	echo "/data/data/com.termux/files/home/storage/downloads/Nodes"
+	cd /data/data/com.termux/files/home/storage/downloads/Nodes
+	mkdir Result
+	echo "Done"
+	echo " "
+	echo " "
+fi
+
+datafile=/data/data/com.termux/files/home/storage/downloads/Nodes/ls.txt
+unzipOption=$2
+
+case "$1" in
+-d) echo "Process has been started..."
+echo "Result will be in Downloads/Nodes/Result workdir"
+cd $workdir
+mvndir=$resdir
+echo "" > $datafile
+ls --file-type *zip >> $datafile
+Lines=$(cat $datafile)
+count=1
+for line in $Lines
+do
+	echo "$line"
+	echo "$count | Unzipping $line file..."
+	unzip $2 "$line" -d "$resdir"
+	count=$(( $count+1 ))
+	echo " "
+done 
+echo "Unzipping: Finished"
+echo " " ;;
+
+-n) echo "Process has been started..."
+echo "Result will be in 'Stick Nodes/stckfigures' workdir"
+echo " "
+cd $workdir
+mvndir=$nodesdir
+echo "" > $datafile
+ls --file-type *zip >> $datafile
+Lines=$(cat $datafile)
+count=1
+for line in $Lines
+do
+	echo "$count | Unzipping $line..."
+	echo " "
+	#echo "Test: unzip \$line($line) -d \$nodesdir($nodesdir)"
+	echo " "
+	unzip $2 "$line" -d "$nodesdir"
+	count=$(( $count+1 ))
+	echo " "
+done
+echo "Unzipping: Finished" 
+echo " " ;;
+
+-mnn)echo "Moving *nodes files to /stickfigures directory"
+     cd $workdir
+     echo "" > $datafile
+     ls --file-type *nodes >> $datafile
+     nodLines=$( cat $datafile )
+     nodCount=1
+     IFS=$'\n'
+     for nodLine in $nodLines
+     do
+	     echo "$nodCount | Moving "$nodLine" to"
+	     echo "$nodesdir"
+	     mv $2 "$nodLine" "$nodesdir"
+	     nodCount=$(( $nodCount + 1 ))
+     done
+     IFS=$OLDIFS
+     echo "Moving: Finished" ;;
+
+-mnd)echo " "
+     echo "Moving *nodes files to /Downloads/Nodes/Result directory"
+     cd $workdir
+     echo "" > $datafile
+     ls --file-type *nodes >> $datafile
+     nodLines=$( cat $datafile )
+     nodCount=1
+     IFS=$'\n'
+     for nodLine in $nodLines
+     do
+	     echo "$nodCount | Moving $nodLine to"
+	     echo "$nodesdir" 
+	     mv $2 "$nodLine" "$resdir"
+	     nodCount=$(( $nodCount + 1 ))
+     done
+     IFS=$OLDIFS
+     echo "Moving: Finished" ;;
+
+-cnn)echo "Coping *nodes files to /stickfigures directory"
+     cd $workdir
+     echo "" > $datafile
+     ls --file-type *nodes >> $datafile
+     nodLines=$( cat $datafile )
+     nodCount=1
+     IFS=$'\n'
+     for nodLine in $nodLines
+     do
+	     echo "$nodCount | Coping "$nodLine" to"
+             echo "$nodesdir"
+             cp $2 "$nodLine" "$nodesdir"
+             nodCount=$(( $nodCount + 1 ))
+     done
+     IFS=$OLDIFS
+     echo "Coping: Finished" ;;
+
+-cnd)echo "Moving *nodes files to /Downloads/Nodes/Result directory"
+     cd $workdir
+     echo "" > $datafile
+     ls --file-type *nodes >> $datafile
+     nodLines=$( cat $datafile )
+     nodCount=1
+     IFS=$'\n'
+     for nodLine in $nodLines
+     do
+	     echo "$nodCount | Coping $nodLine to"
+	     echo "$nodesdir"
+	     cp $2 "$nodLine" "$workdir"
+	     nodCount=$(( $nodCount + 1 ))
+     done
+     IFS=$OLDIFS
+     echo "Coping: Finished" ;;
+
+#-mvn)echo " "
+ #    echo "Moving *nodes files to /stickfigures directory"
+  #   echo "" > $datafile
+   #  ls --file-type *nodes >> $datafile
+    # nodLines=$( cat $datafile )
+#     nodCount=1
+ #    cd $workdir
+  #   for nodLine in $nodLines
+   #  do
+    #         echo "$nodCount | Moving $nodLine to"
+     #        echo "$nodesdir"
+      #       mv "$4" "$nodLine" "$mvndir"
+       #      nodCount=$(( $nodCount + 1 ))
+#     done
+ #    echo "Moving: Finished" ;;
+
+--help) echo "example: $0 -help/-n/-d/-mnd/-mnn/-cnd/-cnn 'unzip param/mv param/cp param'"
+	echo "-"
+	echo "-n - - - - - - This, place result files to        "
+	echo "               Stick Nodes directory. They will   "
+	echo "               be ready for use.                  "
+	echo "-d - - - - - - Thats placinc resul files to       "
+	echo "               'Result' folder, in dowlnloads     "
+	echo "               working folder.                    "
+	echo "--help - - - - Shows thats window                 "
+	echo "-mnd - - - - - move .nodes files to downloads     "
+	echo "               working dir (Donloads/Nodes/Result)"
+	echo "-mnn - - - - - move .nodes files to /stickfigures "
+        echo "               directory                          "
+	echo "-cnd - - - - - copy .nodes files to downloads     "
+        echo "               working dir (Donloads/Nodes/Result)"
+	echo "-cnn - - - - - copy .nodes files to /stickfigures "
+        echo "               directory                          "
+        #echo "-mvn - - - - - moes all .nodes files to result di-"
+        #echo "               rectory (depends from -n/-d keys)  "
+	echo " "
+	#echo "-s - - - - - - skips unzip optoions               "
+	echo "               You can write a 'unzip' parameters "
+	echo "               after -mnd or -mnn. You can  get   "
+	echo "               list of 'unzip' parameters by      "
+	echo "               command 'unzip' in your console    "
+	echo "               You can write a 'mv' parameters    "
+        echo "               after -mnd or -mnn You can get list"
+	echo "               of 'mv' parameters by command      "
+        echo "               'unzip' in your console            "
+	echo " " ;;
+*) echo "Invalid key: $1"
+   echo "\$1"
+echo "For help type '--help'" ;;
+esac
