@@ -60,7 +60,7 @@ chmod +x installNodesExtarctor
 ```
 
 ## *_Conclusion_*
-If you want to select a script, you can delete the folder nodesExctractor through the command:
+If you want to delete a script, you can delete the folder nodesExctractor through the command:
 ```bash
 rm -rf nodesExctractor
 ```
