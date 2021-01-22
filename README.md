@@ -19,22 +19,40 @@ sdcard/Stick Nodes:
 --------------|---------------
 
 ## **_Installing_**
-To install the seript and start using it, you need to install the termux. I heard something has changed there and the author of the program wants everyone to switch to the version with F-Droid.
+To install the seript and start using it, you need to install the Termux. I heard something has changed there and the author of the program wants everyone to switch to the version with F-Droid.
 I recommend installing Termux from an F-Droid source.
 F-Droid | [_Termux on F-Droid_ (_Click Here_)](https://f-droid.org/en/packages/com.termux/)
 --------|-----------------------------------------------------------------
 **Play Market**| [_**Termux on PlayMarket**_ _**(Click Here)**_](https://play.google.com/store/apps/details?id=com.termux)
 
-### **_Setting up Termux_**
-1. Launch the app
+1. Launch the app.  
 2. Copy:
 ```bash
 apt update $$ apt upgrade
 ```
-3. Paste it to Termux and press enter.
-4. Now we need to give Termux permission to work with the folders on the phone. To do this, write:
+Paste it to Termux and press enter.
+3. Now we need to give Termux permission to work with the folders on the phone. To do this, write:
 ```bash
 termux-setup-storage
 ```
-A spit window in which tneba will click 'Allow'.
+A spit window in which you will click 'Allow'.  
+
+4. Now you need to download the script using the command:
+```bash
+git clone https://github.com/VladyslavRehan/nodesExctractor
+```
+   4.1 Before downloading, make sure you have the git installed
+   ```bash
+   pkg install git
+   ```
+
+5. Now let's go to the folders with the script:
+```bash
+cd nodesExctractor
+```
+
+6. Let's make the installation script executable:
+```bash
+chmod +x installNodesExtarctor
+```
 
