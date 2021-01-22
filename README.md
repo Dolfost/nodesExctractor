@@ -9,12 +9,12 @@ The script will check if there is a working directory in the folder /Downloads, 
 During subsequent launches, the script will check for working directories. If they are not, he will try to create them and notify you.
 So, this script works with two folders: 'sdcard/Downloads' and 'sdcard/Stick Nodes'.
 
-sdcard/Downloads/Nodes:
+##### _sdcard/Downloads/Nodes:_
 /Result    | _If you using -cnd -mnd -d, results wi be in this dir._
 -----------|-----------------------------------------------------
 **ls.txt**| **_This is a working file in which the staple stores the names of the files I need to do something._**
 
-sdcard/Stick Nodes:
+##### _sdcard/Stick Nodes:_
 /stickfigures | _From this folder, the program Stick nodes draws models._
 --------------|---------------
 
