@@ -19,7 +19,7 @@ sdcard/Stick Nodes:
 --------------|---------------
 
 ### **_Installing_**
-To install the seript and start using it, you need to install the Termux. I heard something has changed there and the author of the program wants everyone to switch to the version with F-Droid.
+To install the script and start using it, you need to install the Termux. I heard something has changed there and the author of the program wants everyone to switch to the version with F-Droid.
 I recommend installing Termux from an F-Droid source.
 F-Droid | [_Termux on F-Droid_ (_Click Here_)](https://f-droid.org/en/packages/com.termux/)
 --------|-----------------------------------------------------------------
