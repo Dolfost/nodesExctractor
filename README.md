@@ -36,5 +36,5 @@ apt update $$ apt upgrade
 ```bash
 termux-setup-storage
 ```
-A spit window in which tneba will click 'Allow'.
-
+   A spit window in which tneba will click 'Allow'.
+5.
