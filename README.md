@@ -97,6 +97,7 @@ cd nodesExctractor
 3. Let's make the script executable:
 ```bash
 chmod +x nodesExtarctor
+```
 ###### You may need to whiten the script someday:
 3.1 Let's make the uninstall script executable:
 ```bash
