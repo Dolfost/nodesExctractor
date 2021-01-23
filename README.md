@@ -4,9 +4,8 @@ You're probably so tired of unpacking one archive at a time ... Right?
 Then you can try to install my script. 
 
 Briefly about him:  
-For the first time it is desirable to run the script without arguments (by the word arguments, I mean -cnn, -mnn, -n)
-The script will check if there is a working directory in the folder /Downloads, if it is not detected, the script will create it.
-During subsequent launches, the script will check for working directories. If they are not, he will try to create them and notify you.
+This script was created specifically to simplify the installation of models for the program 'Stick Nodes'. In short, you need to put archives and format files .nodes в папку 'sdcard/Downloads/Nodes', run termux, and run the script with the desired parameters.
+Ain will unzip the archives and move the all files in .nodes format to the specified folder. (Depends on the key that you specify when you run the script)
 So, this script works with two folders: 'sdcard/Downloads' and 'sdcard/Stick Nodes'.
 
 ##### _sdcard/Downloads/Nodes:_
