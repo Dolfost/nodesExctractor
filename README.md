@@ -24,7 +24,7 @@ F-Droid | [_Termux on F-Droid_ (_Click Here_)](https://f-droid.org/en/packages/c
 --------|-----------------------------------------------------------------
 **Play Market**| [_**Termux on PlayMarket**_ _**(Click Here)**_](https://play.google.com/store/apps/details?id=com.termux)  
 
-#### _Installation via script 'install'_
+#### _Installation via script 'installer'_
 ##### *1* | _Setting up Termux_
 1. Launch the app  
 
