@@ -35,11 +35,13 @@ F-Droid | [_Termux on F-Droid_ (_Click Here_)](https://f-droid.org/en/packages/c
 apt update $$ apt upgrade
 ```
 Paste it to Termux and press enter.  
+
 3. To download the script itself and the installation file we need to install the git package. To do this, write a command:  
 ```bash
 apt install git
 ```
-And press enter.
+And press enter.  
+
 ##### *2* | _Script installation_
 1. Now, using the git, download the folder with all the scripts. To do this, write a command:
 ```bash
@@ -79,7 +81,8 @@ Paste it to Termux and press enter.
 ```bash
 termux-setup-storage
 ```
-A spit window in which you will click 'Allow'.
+A spit window in which you will click 'Allow'.  
+
 ##### *2* |  _Installing the script_
 1. Now you need to download the script using the command:
 ```bash
@@ -102,7 +105,7 @@ chmod +x nodesExtarctor
 ###### You may need to whiten the script someday:
 3.1 Let's make the uninstall script executable:
 ```bash
-chmod +x uninstall
+chmod +x uninstaller
 ```  
 
 4. To run the script, we must be in the folder with it (/nodesExctractor). To run, write:
@@ -130,6 +133,8 @@ Before deleting a folder 'sdcard/Downloads/Nodes', check if there is anything im
 
 ###### _Take a note:_
 In the scripts, as in this tutorial there may be (or rather there are) gross errors in the use of English... Sorry...  
+
+## *I'm not collecting your information!*  
 
 
 
