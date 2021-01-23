@@ -23,10 +23,51 @@ To install the script and start using it, you need to install the Termux. I hear
 I recommend installing Termux from an F-Droid source.
 F-Droid | [_Termux on F-Droid_ (_Click Here_)](https://f-droid.org/en/packages/com.termux/)
 --------|-----------------------------------------------------------------
-**Play Market**| [_**Termux on PlayMarket**_ _**(Click Here)**_](https://play.google.com/store/apps/details?id=com.termux)
+**Play Market**| [_**Termux on PlayMarket**_ _**(Click Here)**_](https://play.google.com/store/apps/details?id=com.termux)  
 
-#### *1* |  _Setting up Termux_
+#### _Installation via script 'install'_
+##### *1* | _Setting up Termux_
+1. Launch the app  
+
+2. Copy:
+```bash
+apt update $$ apt upgrade
+```
+Paste it to Termux and press enter.  
+3. To download the script itself and the installation file we need to install the git package. To do this, write a command:  
+```bash
+apt install git
+```
+And press enter.
+#### *2* | _Script installation_
+1. Now, using the git, download the folder with all the scripts. To do this, write a command:
+```bash
+git clone https://github.com/VladyslavRehan/nodesExctractor  
+```  
+
+2. Go to the folder with the script:
+```bash
+cd nodesExctractor
+```  
+
+3. We will make the installation script executable:
+```bash
+chmod +x install
+```  
+
+4. We run a script for installation, and we do everything that is asked there ...  
+
+5. To run the script, we must be in the folder with it (/nodesExctractor). To run, write:
+```bash
+./nodesExctractor <parameters here>
+```  
+
+6. How to use the script, read below ...
+
+#### _Manual installation_
+##### *1* |  _Setting up Termux_
 1. Launch the app.  
+
 2. Copy:
 ```bash
 apt update $$ apt upgrade
@@ -37,8 +78,7 @@ Paste it to Termux and press enter.
 ```bash
 termux-setup-storage
 ```
-A spit window in which you will click 'Allow'.  
-
+A spit window in which you will click 'Allow'.
 #### *2* |  _Installing the script_
 1. Now you need to download the script using the command:
 ```bash
@@ -47,17 +87,29 @@ git clone https://github.com/VladyslavRehan/nodesExctractor
    1.1 Before downloading, make sure you have the git installed
    ```bash
    pkg install git
-   ```
+   ```  
 
 2. Now let's go to the folders with the script:
 ```bash
 cd nodesExctractor
-```
+```  
 
-3. Let's make the installation script executable:
+3. Let's make the script executable:
 ```bash
-chmod +x installNodesExtarctor
+chmod +x nodesExtarctor
+###### You may need to whiten the script someday:
+3.1 Let's make the uninstall script executable:
+```bash
+chmod +x uninstall
+```  
+
 ```
+4. To run the script, we must be in the folder with it (/nodesExctractor). To run, write:
+```bash
+./nodesExctractor <parameters here>
+```  
+
+5. How to use the script, read below ...  
 
 ## *_Conclusion_*
 If you want to delete a script, you can delete the folder nodesExctractor through the command:
