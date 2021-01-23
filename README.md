@@ -118,14 +118,18 @@ If you want to delete a script, you can delete the folder nodesExctractor throug
 ```bash
 rm -rf nodesExctractor
 ```
-###### *Take note:*
+###### _Take note:_
 _To do this, you must be in the directory where the folder 'nodesExctractor' is located._
 
 But I recommend deleting the script using a file 'uninstall', he located in nodesExctractor dir.  
 In the process, it will ask you if you want to delete the folder 'Nodes', he is located in 'sdcard/Downloads'.  
 
 ###### *Attention:*
-Before deleting a folder 'Nodes', check if there is anything important left in it.
+Before deleting a folder 'sdcard/Downloads/Nodes', check if there is anything important left in it.  
+
+###### _Take a note:_
+In the scripts, as in this tutorial there may be (or rather there are) gross errors in the use of English... Sorry...  
+
 
 
 
