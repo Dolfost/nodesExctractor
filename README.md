@@ -39,7 +39,7 @@ Paste it to Termux and press enter.
 apt install git
 ```
 And press enter.
-#### *2* | _Script installation_
+##### *2* | _Script installation_
 1. Now, using the git, download the folder with all the scripts. To do this, write a command:
 ```bash
 git clone https://github.com/VladyslavRehan/nodesExctractor  
@@ -79,7 +79,7 @@ Paste it to Termux and press enter.
 termux-setup-storage
 ```
 A spit window in which you will click 'Allow'.
-#### *2* |  _Installing the script_
+##### *2* |  _Installing the script_
 1. Now you need to download the script using the command:
 ```bash
 git clone https://github.com/VladyslavRehan/nodesExctractor
@@ -111,6 +111,8 @@ chmod +x uninstall
 
 5. How to use the script, read below ...  
 
+### *_Using_*
+Soon
 ## *_Conclusion_*
 If you want to delete a script, you can delete the folder nodesExctractor through the command:
 ```bash
