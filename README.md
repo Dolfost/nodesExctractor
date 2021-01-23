@@ -4,8 +4,8 @@ You're probably so tired of unpacking one archive at a time ... Right?
 Then you can try to install my script. 
 
 Briefly about him:  
-This script was created specifically to simplify the installation of models for the program 'Stick Nodes'. In short, you need to put archives and format files .nodes в папку 'sdcard/Downloads/Nodes', run termux, and run the script with the desired parameters.
-Ain will unzip the archives and move the all files in .nodes format to the specified folder. (Depends on the key that you specify when you run the script)
+This script was created specifically to simplify the installation of models for the program 'Stick Nodes'. In short, you need to put archives and format files .nodes to folder 'sdcard/Downloads/Nodes', run termux, and run the script with the desired parameters.
+And it will unzip the archives and move the all files in .nodes format to the specified folder. (Depends on the key that you specify when you run the script)
 So, this script works with two folders: 'sdcard/Downloads' and 'sdcard/Stick Nodes'.
 
 ##### _sdcard/Downloads/Nodes:_
@@ -15,7 +15,9 @@ So, this script works with two folders: 'sdcard/Downloads' and 'sdcard/Stick Nod
 
 ##### _sdcard/Stick Nodes:_
 /stickfigures | _From this folder, the program Stick nodes draws models._
---------------|---------------
+--------------|---------------  
+
+As you can see, the folder 'Stick Nodes' is in the memory of the device, because of this we need to give permission for Termux to write files...
 
 ### **_Installing_**
 To install the script and start using it, you need to install the Termux. I heard something has changed there and the author of the program wants everyone to switch to the version with F-Droid.
