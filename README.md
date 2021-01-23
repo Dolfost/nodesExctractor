@@ -104,7 +104,6 @@ chmod +x nodesExtarctor
 chmod +x uninstall
 ```  
 
-```
 4. To run the script, we must be in the folder with it (/nodesExctractor). To run, write:
 ```bash
 ./nodesExctractor <parameters here>
