@@ -45,7 +45,7 @@ And press enter.
 ##### *2* | _Script installation_
 1. Now, using the git, download the folder with all the scripts. To do this, write a command:
 ```bash
-git clone https://github.com/VladyslavRehan/nodesExctractor  
+git clone https://github.com/Dolfost/nodesExctractor  
 ```  
 
 2. Go to the folder with the script:
@@ -86,7 +86,7 @@ A spit window in which you will click 'Allow'.
 ##### *2* |  _Installing the script_
 1. Now you need to download the script using the command:
 ```bash
-git clone https://github.com/VladyslavRehan/nodesExctractor
+git clone https://github.com/Dolfost/nodesExctractor
 ```
    1.1 Before downloading, make sure you have the git installed
    ```bash
